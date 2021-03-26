@@ -27,7 +27,7 @@ CREATE TABLE `administrador` (
   `nome_completo` varchar(60) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(60) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `telefone` char(11) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `senha` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `senha` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
