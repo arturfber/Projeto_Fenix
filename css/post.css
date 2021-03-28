@@ -1,0 +1,123 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding: 0;
+}
+
+p{
+    font-size: 17px;
+    line-height: 2;
+    margin: 25px 0;
+    /* font-weight: 500; */
+}
+
+header{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div a{
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+ul{
+    display: flex;
+}
+ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+main{
+    padding: 0 80px;
+}
+
+main #head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+main #head h1{
+    font-size: 3rem;
+    margin: 25px 0px;
+}
+
+main small{
+    color: #C3C3C3;
+    font-size: 15px;
+    margin: 5px;
+}
+
+main #content{
+    border-bottom: 2px solid black;
+ }
+ 
+main #content h2{
+    font-size: 2.5rem;
+    margin: 25px 0px;
+}
+
+main #content figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #share{
+    padding: 30px 0;
+}
+
+main #share h3{
+    font-size: 2rem;
+}
+
+main #share #social-icons {
+
+    margin: 20px 0;
+}
+
+main #share #social-icons i{
+    margin: 15px;
+    font-size: 1.8rem;
+}
+
+main #btnReturn{
+    border-top: 2px solid black;  
+    padding: 50px; 
+    display: flex; 
+    justify-content: center;
+}
+
+main #btnReturn a{
+    padding: 15px 20px;
+    border: 1px solid #c3c3c3;
+    color: #a4a4a4;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: #222;
+    padding: 30px; display: flex;
+    justify-content: center;
+}
+
+footer a{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
