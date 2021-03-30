@@ -16,15 +16,36 @@
 
 
     <header>
-        <div id="logo">
-            <a href="#">NOME DO BLOG</a>
-        </div>
-        <ul>
-            <li><a href="index.html">INÍCIO</a></li>
-            <li><a href="artigo.html">ARTIGOS</a></li>
-            <li><a href="">SOBRE MIM</a></li>
-        </ul>
-    </header>
+        <div class="logo"><h2>NOME DO BLOG</h2></div>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="sobre.html">SOBRE MIM</a>
+                </li>
+                <li>
+                    <a href="artigo.html">ARTIGOS</a>
+                </li>
+                <li>
+                    <a class="selected" href="index.html">INÍCIO</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="menu-mobile">
+            <h2><i class="fas fa-bars"></i></h2>
+            <ul>
+                <li class="selected">
+                    <a href="">INÍCIO</a>
+                </li>
+                <li>
+                    <a href="artigo.html">ARTIGOS</a>
+                </li>
+                <li>
+                    <a href="">SOBRE MIM</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="clear"></div><!--clear-->
+</header>
 
 
     <main>
@@ -72,7 +93,7 @@
 
         
         <div id="btnReturn">
-            <a href="index.html">VOLTAR PARA ARTIGOS</a>
+            <a href="artigo.html">VOLTAR PARA ARTIGOS</a>
         </div>
 
     </main>

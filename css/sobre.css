@@ -11,11 +11,6 @@ body, head{
     max-width: 1400px;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
 /*CLASSES AUXILIARES*/
 
 .clear{
@@ -106,54 +101,41 @@ nav.menu a:hover{
     color: black;
 }
 
-/*SECTION-ARTIGOS*/
+/*SECTION MINHA EQUIPE*/
 
-section.artigos{
+section.minha-equipe{
     background-color: rgba(105,160,215,0.09);
-    padding: 80px 35px;
+    padding: 85px 150px;
 }
 
-.titulo h2{
-    margin-bottom: 90px;
-    text-align: center;
-    font-size: 42px;
-    letter-spacing: 6.5px;
+.equipe-img{
+    width: 50%;
+    float: left;
+}
+
+.equipe-info{
+    width: 50%;
+    float: left;
+    margin-top: 20px;
+}
+
+.equipe-img img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.equipe-info h2{
+    font-size: 32px;
     font-weight: 500;
-}
-
-.post-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.post-box{
-    /* border: 2px solid #000; */
-    width: 33.3%;
-    padding: 18px 18px;
-}
-
-.post-box img{
-    width: 100%;
-    height: 215px;
-}
-
-.post-box h2{
-    font-size: 20px;
     letter-spacing: 5px;
-    font-weight: 450;
-    margin: 15px 0;
 }
 
-.post-box .data{
-    margin-bottom: 15px;
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 15px;
+.info-p{
+    margin-top: 10px;
+    letter-spacing: 3px;
 }
 
-.post-box p{
-    font-weight: 500;
-    letter-spacing: 2px;
-}
 
 /*FOOTER*/
 
@@ -176,39 +158,25 @@ footer{
     padding: 5px;
 }
 
-@media screen and (max-width: 1200px){
-    section.seguir .seguir-img{
-        padding: 50px;
-    }
-
-    .over img{
-        margin-top: 110px;
-    }
-}
-
 @media screen and (max-width: 1150px){
-    section.post{
-        padding: 60px 200px;
+
+    .equipe-img{
+        width: 100%;
+    }
+    
+    .equipe-info{
+        width: 100%;
     }
 
-    .post-box{
-        width: 50%;
+    section.minha-equipe{
+        padding: 85px 50px;
+        text-align: center;
     }
+
 }
+
 
 @media screen and (max-width: 1000px){
-    section.post{
-        padding: 60px 100px;
-    }
-
-    .over img{
-        margin-top: 80px;
-        width: 200px;
-    }
-
-    .over h3{
-        font-size: 35px;
-    }
 
     .footer-container{
         width: 100%;
@@ -233,44 +201,11 @@ footer{
 
     header nav li{
         padding: 0 5px;
-    }
-
-    section.post{
-        padding: 60px 50px;
-    }
-
-    .over img{
-        margin-top: 40px;
-        background-position: center;
-    }
-
-    .over h3{
-        font-size: 25px;
-    }
-
-    .post-box{
-        width: 100%;
-    }
-
-    section.artigos{
-        padding: 80px 25px;
-    }
+    
 
 }
 
 @media screen and (max-width: 650px){
-    .over img{
-        width: 100px;
-        margin-top: 150px;
-    }
-
-    section.post{
-        padding: 60px 15px;
-    }
-
-    .over img{
-        margin-top: 25px;
-    }
 
     nav.menu-mobile{
         display: block;
@@ -279,5 +214,4 @@ footer{
     nav.menu{
         display: none;
     }
-
 }

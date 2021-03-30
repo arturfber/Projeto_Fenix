@@ -17,6 +17,11 @@ body, head{
     clear: both;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 /*HEADER*/
 
 header{
@@ -161,8 +166,6 @@ section.seguir .seguir-img{
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 260px;
-    padding: 70px 250px;
     position: relative;
 }
 
@@ -175,6 +178,7 @@ section.seguir .seguir-img{
 
 .info-seguir{
     position: relative;
+    padding: 40px;
     z-index: 2;
 }
 
@@ -183,6 +187,44 @@ section.seguir .seguir-img{
     color: white;
     line-height: 30px;
 }
+
+.seguir div .info-seguir form{
+    margin: 25px 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.seguir div .info-seguir form input{
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    background-color: transparent;
+    border-radius: 5px;
+    flex-grow: 1;
+    border: 2px solid #ffffff;
+    outline: none;
+    padding: 10px 15px;
+    margin: 0 10px 0 0;
+}
+
+.seguir div .info-seguir form a{
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 5px;
+    width: 20%;
+    color: #FFF;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.25s;
+}
+
+.seguir div .info-seguir form a:hover{
+    background-color: #FFF;
+    color: #000000;
+}
+
 
 section.seguir .overlay-2{
     position: absolute;
@@ -240,10 +282,10 @@ section.post h2{
     margin-top: 80px;
 }
 
-.botao input[type=submit]{
+.botao a{
     transition: 0.3s;
     width: 235px;
-    height: 50px;
+    padding: 16px;
     font-size: 14px;
     letter-spacing: 1px;
     border: solid 1px rgba(0, 0, 0, 0.5);
@@ -251,7 +293,7 @@ section.post h2{
     font-weight: 500;
 }
 
-.botao input[type=submit]:hover{
+.botao a:hover{
     transition: 0.3s;
     border:solid 1px black;
     cursor: pointer;
@@ -260,7 +302,7 @@ section.post h2{
 /*FOOTER*/
 
 footer{
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #222;
     margin-top: 16px;
     padding: 50px 105px;
     max-height: 150px;
@@ -274,14 +316,14 @@ footer{
 
 .footer-container p{
     font-weight: bold;
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 1);
     padding: 5px;
 }
 
 
 @media screen and (max-width: 1200px){
     section.seguir .seguir-img{
-        padding: 50px;
+        /* padding: 50px; */
     }
 
     .over img{
