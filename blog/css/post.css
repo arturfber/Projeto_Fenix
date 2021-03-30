@@ -1,0 +1,181 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding: 0;
+}
+
+p{
+    font-size: 17px;
+    line-height: 2;
+    margin: 25px 0;
+    /* font-weight: 500; */
+}
+
+header{
+    padding: 42px 50px;
+}
+
+.logo{
+    float: left;
+}
+
+header nav.menu li{
+    float: right;
+    padding: 0 15px;
+    display: flex;
+}
+
+.logo h2{
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+nav.menu-mobile{
+    display: none;
+    float: right;
+}
+
+nav.menu-mobile ul{
+    display: none;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 90px;
+    z-index: 999;
+    text-align: center;
+}
+
+nav.menu-mobile li{
+    padding: 8px 0;
+    border-bottom: solid 2px black;
+}
+
+nav.menu-mobile a{
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+nav.menu-mobile h2{
+    cursor: pointer;
+}
+
+nav.menu-mobile .selected{
+    border-top: solid 2px black;
+    background-color: rgb(225, 225, 225);
+}
+
+nav.menu .selected{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+nav.menu a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+nav.menu a:hover{
+    transition: 0.3s;
+    color: black;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+main{
+    padding: 0 80px;
+}
+
+main #head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+main #head h1{
+    font-size: 3rem;
+    margin: 25px 0px;
+}
+
+main small{
+    color: #C3C3C3;
+    font-size: 15px;
+    margin: 5px;
+}
+
+main #content{
+    border-bottom: 2px solid black;
+ }
+ 
+main #content h2{
+    font-size: 2.5rem;
+    margin: 25px 0px;
+}
+
+main #content figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main #share{
+    padding: 30px 0;
+}
+
+main #share h3{
+    font-size: 2rem;
+}
+
+main #share #social-icons {
+
+    margin: 20px 0;
+}
+
+main #share #social-icons i{
+    margin: 15px;
+    font-size: 1.8rem;
+}
+
+main #btnReturn{
+    border-top: 2px solid black;  
+    padding: 50px; 
+    display: flex; 
+    justify-content: center;
+}
+
+main #btnReturn a{
+    padding: 15px 20px;
+    border: 1px solid #c3c3c3;
+    color: #a4a4a4;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+footer{
+    background-color: #222;
+    padding: 30px; display: flex;
+    justify-content: center;
+}
+
+footer a{
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.2rem;
+}

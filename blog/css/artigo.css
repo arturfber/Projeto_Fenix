@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body, head{
+    padding: 0 1.2%;
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*CLASSES AUXILIARES*/
+
+.clear{
+    clear: both;
+}
+
+/*HEADER*/
+
+header{
+    padding: 42px 50px;
+}
+
+.logo{
+    float: left;
+}
+
+header nav.menu li{
+    float: right;
+    padding: 0 15px;
+    display: flex;
+}
+
+.logo h2{
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+nav.menu-mobile{
+    display: none;
+    float: right;
+}
+
+nav.menu-mobile ul{
+    display: none;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 90px;
+    z-index: 999;
+    text-align: center;
+}
+
+nav.menu-mobile li{
+    padding: 8px 0;
+    border-bottom: solid 2px black;
+}
+
+nav.menu-mobile a{
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+nav.menu-mobile h2{
+    cursor: pointer;
+}
+
+nav.menu-mobile .selected{
+    border-top: solid 2px black;
+}
+
+nav.menu-mobile .selected-bk{
+    background-color: rgb(225, 225, 225);
+}
+
+nav.menu .selected{
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+nav.menu a{
+    transition: 0.3s;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+nav.menu a:hover{
+    transition: 0.3s;
+    color: black;
+}
+
+/*SECTION-ARTIGOS*/
+
+section.artigos{
+    background-color: rgba(105,160,215,0.09);
+    padding: 80px 35px;
+}
+
+.titulo h2{
+    margin-bottom: 90px;
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 6.5px;
+    font-weight: 500;
+}
+
+.post-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-box{
+    /* border: 2px solid #000; */
+    width: 33.3%;
+    padding: 18px 18px;
+}
+
+.post-box img{
+    width: 100%;
+    height: 215px;
+}
+
+.post-box h2{
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 450;
+    margin: 15px 0;
+}
+
+.post-box .data{
+    margin-bottom: 15px;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+}
+
+.post-box p{
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 16px;
+    padding: 50px 105px;
+    max-height: 150px;
+}
+
+.footer-container{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.footer-container p{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+}
+
+@media screen and (max-width: 1200px){
+    section.seguir .seguir-img{
+        padding: 50px;
+    }
+
+    .over img{
+        margin-top: 110px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    section.post{
+        padding: 60px 200px;
+    }
+
+    .post-box{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    section.post{
+        padding: 60px 100px;
+    }
+
+    .over img{
+        margin-top: 80px;
+        width: 200px;
+    }
+
+    .over h3{
+        font-size: 35px;
+    }
+
+    .footer-container{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    footer{
+        padding: 10px 105px;
+    }
+
+}
+
+@media screen and (max-width: 750px){
+    section.seguir .seguir-img{
+        padding: 20px;
+        background-position: center;
+    }
+
+    header{
+        padding: 42px 25px;
+    }
+
+    header nav li{
+        padding: 0 5px;
+    }
+
+    section.post{
+        padding: 60px 50px;
+    }
+
+    .over img{
+        margin-top: 40px;
+        background-position: center;
+    }
+
+    .over h3{
+        font-size: 25px;
+    }
+
+    .post-box{
+        width: 100%;
+    }
+
+    section.artigos{
+        padding: 80px 25px;
+    }
+
+}
+
+@media screen and (max-width: 650px){
+    .over img{
+        width: 100px;
+        margin-top: 150px;
+    }
+
+    section.post{
+        padding: 60px 15px;
+    }
+
+    .over img{
+        margin-top: 25px;
+    }
+
+    nav.menu-mobile{
+        display: block;
+    }
+
+    nav.menu{
+        display: none;
+    }
+
+}
