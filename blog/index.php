@@ -1,3 +1,15 @@
+<?php
+    if(isset($_GET['msg'])){
+        if($_GET['msg'] == 'erro'){
+            $msg = "ERRO: Nome ou e-mail inválido(s)!!!";
+        }else if($_GET['msg'] == 'sucesso'){
+            $msg = "Cadastrado com sucesso!!!";
+        }
+    }else{
+        $msg = "";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -32,14 +44,15 @@
     <section class="seguir">
             <div class="seguir-img">
                 <div class="overlay-2"></div>
-                <div class="info-seguir">
+                <div class="info-seguir" id="info-seguir">
                     <h2>SIGA O NOME DO BLOG</h2>
                     <p>Veja as últimas notícias no mundo dos games, aqui você ficará sabendo tudo o que acontece em tempo real, todas as informações, dicas e preços!</p>
-                    <form action="POST">
-                        <input type="text" placeholder="NOME">
-                        <input type="email" placeholder="E-MAIL">
-                        <a href="" type="submit">CADASTRAR</a>
+                    <form action="modules/cadastro_usuario.php" method="POST">
+                        <input type="text" name="nome" placeholder="NOME">
+                        <input type="email" name="email" placeholder="E-MAIL">
+                        <input id="cadastrar" type="submit" value="CADASTRAR"/>
                     </form>
+                    <p><?=$msg?></p>
                 </div><!--info-seguir-->
             </div><!--seguir-img-->
     </section>

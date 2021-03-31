@@ -206,11 +206,11 @@ section.seguir .seguir-img{
     margin: 0 10px 0 0;
 }
 
-.seguir div .info-seguir form a{
+.seguir div .info-seguir form #cadastrar{
     font-size: 20px;
     padding: 7px;
     border-radius: 5px;
-    width: 20%;
+    width: 0%;
     color: #FFF;
     background-color: transparent;
     border: 2px solid #FFF;
@@ -220,9 +220,10 @@ section.seguir .seguir-img{
     transition: background-color 0.25s;
 }
 
-.seguir div .info-seguir form a:hover{
+.seguir div .info-seguir form #cadastrar:hover{
     background-color: #FFF;
     color: #000000;
+    cursor: pointer;
 }
 
 
