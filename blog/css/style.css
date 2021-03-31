@@ -191,10 +191,22 @@ section.seguir .seguir-img{
 .seguir div .info-seguir form{
     margin: 25px 0 0 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
+.box-input{
+    width: 40%;
+    padding-left: 10px;
+}
+
+.box-submit{
+    width: 20%;
+    padding-left: 10px;
+}
+
 .seguir div .info-seguir form input{
+    width: 100%;
     color: rgb(255, 255, 255);
     font-size: 15px;
     background-color: transparent;
@@ -351,13 +363,20 @@ footer{
         font-size: 35px;
     }
 
+    .footer-container p{
+        font-size: 13px;
+    }
+
     .footer-container{
         width: 100%;
-        margin-bottom: 10px;
     }
 
     footer{
-        padding: 10px 105px;
+        padding: 15px 50px;
+    }
+
+    .seguir div .info-seguir form{
+        display: ;
     }
 
 }

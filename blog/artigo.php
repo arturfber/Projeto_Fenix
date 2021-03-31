@@ -1,3 +1,16 @@
+<?php
+
+    include_once "conexao.php";
+
+    $sql = 'select * from noticias inner join imagem on noticias.id = imagem.fk_noticias_id';
+
+    $link = $connect->query($sql);
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,62 +31,24 @@
     <section class="artigos">
         <div class="titulo"><h2>ARTIGOS</h2></div>
         <div class="post-container">
+            
+            <?php
+                foreach($link as $noticia):
+            ?>
+            
             <div class="post-box">
                 <a href="post.php">
-                    <img src="./image/font-1.jpg" alt="">
-                    <h2>Lorem, ipsum dolor</h2>
-                    <p class="data">23/03/2021</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
+                    <img src="<?=$noticia['imagem']?>" alt="">
+                    <h2><?=$noticia['titulo'];?></h2>
+                    <p class="data">30/03/2021</p>
+                    <p><?=$noticia['texto']?></p>
                 </a>
             </div>
-            <div class="post-box">
-                <img src="./image/font-2.jpg" alt="">
-                <h2>Lorem, ipsum dolor</h2>
-                <p class="data">23/03/2021</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
-            </div>
-            <div class="post-box">
-                <img src="./image/font-3.jpg" alt="">
-                <h2>Lorem, ipsum dolor</h2>
-                <p class="data">23/03/2021</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
-            </div>
-            <div class="post-box">
-                <img src="./image/font-4.jpg" alt="">
-                <h2>Lorem, ipsum dolor</h2>
-                <p class="data">23/03/2021</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
-            </div>
-            <div class="post-box">
-                <img src="./image/font-5.jpg" alt="">
-                <h2>Lorem, ipsum dolor</h2>
-                <p class="data">23/03/2021</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
-            </div>
-            <div class="post-box">
-                <img src="./image/font-6.jpg" alt="">
-                <h2>Lorem, ipsum dolor</h2>
-                <p class="data">23/03/2021</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
-            </div>
-            <div class="post-box">
-                <img src="./image/font-7.jpg" alt="">
-                <h2>Lorem, ipsum dolor</h2>
-                <p class="data">23/03/2021</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
-            </div>
-            <div class="post-box">
-                <img src="./image/font-8.jpg" alt="">
-                <h2>Lorem, ipsum dolor</h2>
-                <p class="data">23/03/2021</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
-            </div>
-            <div class="post-box">
-                <img src="./image/font-9.jpg" alt="">
-                <h2>Lorem, ipsum dolor</h2>
-                <p class="data">23/03/2021</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque cum architecto necessitatibus unde quod quo fuga deleniti repellat saepe ratione, minus sit ipsam, alias dicta quia culpa. Vitae, quas blanditiis.</p>
-            </div>
+
+            <?php
+                endforeach;
+            ?>
+            
         </div>
     </section>
 

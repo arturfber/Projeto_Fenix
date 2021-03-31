@@ -7,18 +7,14 @@
     ?>
 
     <title>Post</title>
-
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/post.css">
 
 </head>
 <body>
 
-
     <?php
         include_once "modules/header.php"
     ?>
-
 
     <main>
 
@@ -34,14 +30,14 @@
 
         <div id="content">
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque dignissimos deleniti sed error dolorem autem perferendis obcaecati eligendi praesentium quos neque consectetur voluptatibus quia quisquam magni corrupti, molestias itaque. Cupiditate!</p>
+            <p style="margin-top: 15px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque dignissimos deleniti sed error dolorem autem perferendis obcaecati eligendi praesentium quos neque consectetur voluptatibus quia quisquam magni corrupti, molestias itaque. Cupiditate!</p>
 
             <h2>Segundo Título</h2>
 
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem officiis minus quos nulla sed natus porro harum, quae placeat. Similique, est. Enim saepe ducimus, est nam quo praesentium nulla sint Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis consequuntur, velit iure deleniti veritatis libero doloribus, doloremque eaque necessitatibus dicta est aspernatur nihil dolor? Numquam possimus sapiente a debitis. Tempore.</p>
 
             <figure>
-                <img src="https://tecnoblog.net/meiobit/wp-content/uploads/2016/12/20161212super-mario-run.jpg" width="800" alt="">
+                <img style="margin-top: 35px;" src="https://tecnoblog.net/meiobit/wp-content/uploads/2016/12/20161212super-mario-run.jpg" width="800" alt="">
                 <figcaption>Descrição da Imagem</figcaption>
             </figure>
 
@@ -64,9 +60,9 @@
         </div>
 
         
-        <div id="btnReturn">
+        <div class="botao">
             <a href="artigo.php">VOLTAR PARA ARTIGOS</a>
-        </div>
+        </div><!--botao-->
 
     </main>
 

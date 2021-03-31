@@ -1,17 +1,28 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body{
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
 }
 
-p{
-    font-size: 17px;
-    line-height: 2;
-    margin: 25px 0;
-    /* font-weight: 500; */
+body, head{
+    padding: 0 1.2%;
+    margin: 0 auto;
+    max-width: 1400px;
 }
+
+/*CLASSES AUXILIARES*/
+
+.clear{
+    clear: both;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*HEADER*/
 
 header{
     padding: 42px 50px;
@@ -107,6 +118,9 @@ main #head{
     align-items: center;
 }
 
+main #content p{
+    line-height: 30px;
+}
 
 main #head h1{
     font-size: 3rem;
@@ -118,10 +132,6 @@ main small{
     font-size: 15px;
     margin: 5px;
 }
-
-main #content{
-    border-bottom: 2px solid black;
- }
  
 main #content h2{
     font-size: 2.5rem;
@@ -136,6 +146,9 @@ main #content figure{
 
 main #share{
     padding: 30px 0;
+    border-top: 2px solid black; 
+    border-bottom: 2px solid black;
+    margin-top: 30px;
 }
 
 main #share h3{
@@ -152,8 +165,7 @@ main #share #social-icons i{
     font-size: 1.8rem;
 }
 
-main #btnReturn{
-    border-top: 2px solid black;  
+main #btnReturn{ 
     padding: 50px; 
     display: flex; 
     justify-content: center;
@@ -167,15 +179,43 @@ main #btnReturn a{
     cursor: pointer;
 }
 
+.botao{
+    margin: 80px;
+    text-align: center;
+}
+
+.botao a{
+    transition: 0.3s;
+    width: 235px;
+    padding: 16px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.botao a:hover{
+    transition: 0.3s;
+    border:solid 1px black;
+    cursor: pointer;
+}
 
 footer{
     background-color: #222;
-    padding: 30px; display: flex;
-    justify-content: center;
+    margin-top: 16px;
+    padding: 50px 105px;
+    max-height: 150px;
 }
 
-footer a{
-    color: #FFF;
-    font-weight: 700;
-    font-size: 1.2rem;
+.footer-container{
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.footer-container p{
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    padding: 5px;
 }

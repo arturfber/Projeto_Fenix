@@ -1,3 +1,13 @@
+<?php
+
+    include_once "conexao.php";
+
+    $sql = 'select * from noticias inner join imagem on noticias.id = imagem.fk_noticias_id limit 3';
+
+    $link = $connect->query($sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -36,9 +46,16 @@
                     <h2>SIGA O NOME DO BLOG</h2>
                     <p>Veja as últimas notícias no mundo dos games, aqui você ficará sabendo tudo o que acontece em tempo real, todas as informações, dicas e preços!</p>
                     <form action="POST">
-                        <input type="text" placeholder="NOME">
-                        <input type="email" placeholder="E-MAIL">
-                        <a href="" type="submit">CADASTRAR</a>
+                        <div class="box-input">
+                            <input type="text" placeholder="NOME">
+                        </div>
+                        <div class="box-input">
+                            <input type="email" placeholder="E-MAIL">
+                        </div>
+                        <div class="box-submit">
+                            <a href="" type="submit">CADASTRAR</a>
+                        </div>
+                          
                     </form>
                 </div><!--info-seguir-->
             </div><!--seguir-img-->
@@ -46,32 +63,28 @@
 
     <section class="post">
         <h2>POSTS MAIS RECENTES</h2>
+        
+        <?php
+
+            foreach($link as $noticias):
+
+        ?>
+        
         <div class="info-post">
             <a href="post.php">
-                <h2>Nintendo pode anunciar um novo switch ainda esse ano</h2>
-                <p>23/03/2021</p>
-                <img src="./image/font-1.jpg" alt="">
-                <p class="info-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores eum beatae vitae omnis ad, repellat, aliquid aliquam expedita iusto molestiae laudantium iure aut sint quisquam voluptates laborum excepturi a neque.</p>
+                <h2><?=$noticias['titulo']?></h2>
+                <p>30/03/2021</p>
+                <img src="<?=$noticias['imagem']?>" alt="">
+                <p class="info-p"><?=$noticias['texto']?></p>
             </a>
         </div><!--info-post-->
 
-        <div class="info-post">
-            <a href="post.php">
-                <h2>Empresas vão focar em jogos mobile</h2>
-                <p>23/03/2021</p>
-                <img src="./image/font-2.jpg" alt="">
-                <p class="info-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores eum beatae vitae omnis ad, repellat, aliquid aliquam expedita iusto molestiae laudantium iure aut sint quisquam voluptates laborum excepturi a neque.</p>
-            </a>
-        </div><!--info-post-->
+        <?php
 
-        <div class="info-post">
-            <a href="post.php">
-                <h2>Soni anuncia o PSVR para na nova geração</h2>
-                <p>23/03/2021</p>
-                <img src="./image/font-3.jpg" alt="">
-                <p class="info-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores eum beatae vitae omnis ad, repellat, aliquid aliquam expedita iusto molestiae laudantium iure aut sint quisquam voluptates laborum excepturi a neque.</p>
-            </a>
-        </div><!--info-post-->
+            endforeach;
+
+        ?>
+            
         <div class="botao">
             <a href="artigo.php">VER TODOS OS POSTS</a>
         </div><!--botao-->
