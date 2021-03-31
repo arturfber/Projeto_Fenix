@@ -1,7 +1,17 @@
 <?php
 
-include_once "modules/get_artigos.php";
-$link = get_artigos(true);
+  include_once "modules/get_artigos.php";
+  $link = get_artigos(true);
+
+  if(isset($_GET['msg'])){
+      if($_GET['msg'] == 'erro'){
+          $msg = "ERRO: Nome ou e-mail inválido(s)!!!";
+      }else if($_GET['msg'] == 'sucesso'){
+          $msg = "Cadastrado com sucesso!!!";
+      }
+  }else{
+      $msg = "";
+  }
 
 ?>
 
@@ -39,21 +49,15 @@ $link = get_artigos(true);
     <section class="seguir">
             <div class="seguir-img">
                 <div class="overlay-2"></div>
-                <div class="info-seguir">
+                <div class="info-seguir" id="info-seguir">
                     <h2>SIGA O NOME DO BLOG</h2>
                     <p>Veja as últimas notícias no mundo dos games, aqui você ficará sabendo tudo o que acontece em tempo real, todas as informações, dicas e preços!</p>
-                    <form action="POST">
-                        <div class="box-input">
-                            <input type="text" placeholder="NOME">
-                        </div>
-                        <div class="box-input">
-                            <input type="email" placeholder="E-MAIL">
-                        </div>
-                        <div class="box-submit">
-                            <a href="" type="submit">CADASTRAR</a>
-                        </div>
-                          
+                    <form action="modules/cadastro_usuario.php" method="POST">
+                        <input type="text" name="nome" placeholder="NOME">
+                        <input type="email" name="email" placeholder="E-MAIL">
+                        <input id="cadastrar" type="submit" value="CADASTRAR"/>
                     </form>
+                    <p><?=$msg?></p>
                 </div><!--info-seguir-->
             </div><!--seguir-img-->
     </section>
@@ -62,9 +66,7 @@ $link = get_artigos(true);
         <h2>POSTS MAIS RECENTES</h2>
         
         <?php
-
             foreach($link as $noticias):
-
         ?>
         
         <div class="info-post">
@@ -77,9 +79,7 @@ $link = get_artigos(true);
         </div><!--info-post-->
 
         <?php
-
             endforeach;
-
         ?>
             
         <div class="botao">
