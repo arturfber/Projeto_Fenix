@@ -70,7 +70,7 @@
         ?>
         
         <div class="info-post">
-            <a href="post.php">
+            <a href="post.php?id=<?=$noticias['id']?>">
                 <h2><?=$noticias['titulo']?></h2>
                 <p><?= date("d/m/Y", strtotime($noticias['data_noticia']))?></p>
                 <img src="<?=$noticias['imagem']?>" alt="">
