@@ -72,9 +72,9 @@
         <div class="info-post">
             <a href="post.php">
                 <h2><?=$noticias['titulo']?></h2>
-                <p>30/03/2021</p>
+                <p><?= date("d/m/Y", strtotime($noticias['data_noticia']))?></p>
                 <img src="<?=$noticias['imagem']?>" alt="">
-                <p class="info-p"><?=$noticias['texto']?></p>
+                <p class="info-p"><?=$noticias['subtitulo']?></p>
             </a>
         </div><!--info-post-->
 

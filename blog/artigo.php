@@ -36,9 +36,9 @@
             <div class="post-box">
                 <a href="post.php">
                     <img src="<?=$noticia['imagem']?>" alt="">
-                    <h2><?=$noticia['titulo'];?></h2>
-                    <p class="data">30/03/2021</p>
-                    <p><?=$noticia['texto']?></p>
+                    <h2><?=$noticia['titulo'] ?></h2>
+                    <p><?= date("d/m/Y", strtotime($noticia['data_noticia']))?></p>
+                    <p><?=$noticia['subtitulo']?></p>
                 </a>
             </div>
 
