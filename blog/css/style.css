@@ -375,8 +375,14 @@ footer{
         padding: 15px 50px;
     }
 
-    .seguir div .info-seguir form{
-        display: ;
+    .box-input{
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .box-submit{
+        width: 100%;
+        padding: 17px 0;
     }
 
 }
