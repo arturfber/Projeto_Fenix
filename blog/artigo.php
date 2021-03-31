@@ -1,10 +1,7 @@
 <?php
 
-    include_once "conexao.php";
-
-    $sql = 'select * from noticias inner join imagem on noticias.id = imagem.fk_noticias_id';
-
-    $link = $connect->query($sql);
+  include_once "modules/get_artigos.php";
+  $link = get_artigos(false);
 
 ?>
 
