@@ -1,7 +1,7 @@
 <?php
 
-  include_once "modules/get_artigos.php";
-  $link = get_artigos(false);
+    include_once "modules/get_artigos.php";
+    $link = get_artigos(false);
 
 ?>
 
@@ -34,7 +34,7 @@
             ?>
             
             <div class="post-box">
-                <a href="post.php">
+                <a href="post.php?id=<?=$noticia['id']?>">
                     <img src="<?=$noticia['imagem']?>" alt="">
                     <h2><?=$noticia['titulo'] ?></h2>
                     <p><?= date("d/m/Y", strtotime($noticia['data_noticia']))?></p>
