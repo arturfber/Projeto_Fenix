@@ -10,25 +10,31 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li class="nav-item ">
-        <a class="nav-link" href="./user.php">
+        <a class="nav-link" href="http://localhost/Projeto%20F%C3%AAnix/painel_adm/user.php">
           <i class="material-icons">person</i>
           <p>User Profile</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="./tables.php">
+        <a class="nav-link" href="http://localhost/Projeto%20F%C3%AAnix/painel_adm/tables.php">
           <i class="material-icons">content_paste</i>
           <p>Table List</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="./typography.php">
+        <a class="nav-link" href="http://localhost/Projeto%20F%C3%AAnix/painel_adm/adm/adm.php">
+          <i class="material-icons">content_paste</i>
+          <p>Lista Administrador</p>
+        </a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="http://localhost/Projeto%20F%C3%AAnix/painel_adm/typography.php">
           <i class="material-icons">library_books</i>
           <p>Typography</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="./icons.php">
+        <a class="nav-link" href="http://localhost/Projeto%20F%C3%AAnix/painel_adm/icons.php">
           <i class="material-icons">bubble_chart</i>
           <p>Icons</p>
         </a>
