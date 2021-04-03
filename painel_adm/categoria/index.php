@@ -1,5 +1,9 @@
 <?php
 include_once "get_categorias.php";
+
+if ($_GET['msg'] == "adderro") {
+  $msgadd = "Ocorreu um erro ao criar a categoria!!!";
+}
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +54,21 @@ include_once "get_categorias.php";
                       </thead>
 
                       <tbody>
+
+                        <tr> 
+                          <form action="add.php" id="add_cat" method="post">
+                            <td>
+                              <input type="text" name="nome" placeholder="Adicione uma categoria...">
+                              <p class="text-danger"><?= $msgadd ?></p>
+                            </td>
+                            <td>
+                              <a href="javascript:add_cat.submit()" onclick="loading(this)">
+                                  <i class="material-icons">check</i>
+                              </a>
+                            </td>
+                          </form>
+                        </tr>
+
                       <?php foreach ($categorias as $categoria): ?>
                         <tr>
                           <td>
@@ -58,7 +77,7 @@ include_once "get_categorias.php";
                               <input type="text" class="form-control-plaintext" name="nome" id="cat<?= $categoria['id']?>" value="<?= $categoria['nome']?>" readonly>
                           </td>
                           <td>
-                            <a href="javascript:edit<?= $categoria['id']?>.submit()" id="submit<?=$categoria['id']?>" class="invisible">
+                            <a href="javascript:edit<?= $categoria['id']?>.submit()" onclick="loading(this)" id="submit<?=$categoria['id']?>" class="invisible">
                               <i class="material-icons">check</i>
                             </a>
                             
