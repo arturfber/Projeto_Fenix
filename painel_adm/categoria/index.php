@@ -44,7 +44,6 @@ include_once "get_categorias.php";
                   <div class="table-responsive">
                     <table class="table">
                       <thead class=" text-primary">
-                        <th> ID </th>
                         <th> Nome </th>
                         <th> Editar </th>
                         <th> Excluir </th>
@@ -53,10 +52,20 @@ include_once "get_categorias.php";
                       <tbody>
                       <?php foreach ($categorias as $categoria): ?>
                         <tr>
-                          <td><?= $categoria['id'] ?></td>
-                          <td><?= $categoria['nome']?></td>
                           <td>
-                            <i class="material-icons">edit</i>
+                            <form id="edit<?= $categoria['id']?>" action="edit.php" method="post">
+                              <input type="hidden" name="id" id="cat<?= $categoria['id']?>" value="<?= $categoria['id']?>">
+                              <input type="text" class="form-control-plaintext" name="nome" id="cat<?= $categoria['id']?>" value="<?= $categoria['nome']?>" readonly>
+                          </td>
+                          <td>
+                            <a href="javascript:edit<?= $categoria['id']?>.submit()" id="submit<?=$categoria['id']?>" class="invisible">
+                              <i class="material-icons">check</i>
+                            </a>
+                            
+                            <a href="#" id="toggle_edit<?= $categoria['id']?>" onclick="toggle_edit(<?= $categoria['id']?>)">
+                                <i class="material-icons">edit</i>
+                            </a>
+                            </form>
                           </td>
                           <td>
                             <a href="delete.php?id=<?= $categoria['id'] ?>">
@@ -85,6 +94,7 @@ include_once "get_categorias.php";
     </div>
   </div>
 
+  <script src="edit.js"></script>
   <?php
     include_once "../common/scripts.php";
     if ($_GET['msg'] == 'delerro') {
