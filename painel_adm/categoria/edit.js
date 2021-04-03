@@ -9,3 +9,7 @@ function toggle_edit(id) {
     toggle.classList.add("invisible");
   } 
 }
+
+function loading(id) {
+  id.querySelector('i').innerHTML = "refresh";
+}
