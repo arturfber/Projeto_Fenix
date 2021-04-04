@@ -4,7 +4,8 @@
     if (isset($_GET['id'])){
         $id = $_GET['id'];
 
-        include_once "dados_adm.php";
+        $sql = 'SELECT * FROM administrador WHERE id = ' .$id;
+        $dados_adm = $connect->query($sql);
 
         foreach ($dados_adm as $dado){
             $infos = $dado;
@@ -75,7 +76,7 @@
                                                 <div class="col-md-10">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">Nome</label>
-                                                        <input type="text" class="form-control" name="nome_completo" placeholder="<?= $id ? $infos['nome_completo'] : "" ?>" <?= $id ? "" : "required" ?>/>
+                                                        <input type="text" class="form-control" name="nome_completo" value="<?= $id ? $infos['nome_completo'] : "" ?>" <?= $id ? "" : "required" ?>/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,7 +84,7 @@
                                                 <div class="col-md-8">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">E-mail</label>
-                                                        <input type="email" class="form-control" name="email" placeholder="<?= $id ? $infos['email'] : "" ?>"/>
+                                                        <input type="email" class="form-control" name="email" value="<?= $id ? $infos['email'] : "" ?>"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -91,13 +92,13 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">Telefone</label>
-                                                        <input type="tel" class="form-control" pattern="[0-9]{5}-[0-9]{4}" name="telefone" placeholder="<?= $id ? $infos['telefone'] : "" ?>" <?= $id ? "" : "required" ?>/>
+                                                        <input type="tel" class="form-control" pattern="[0-9]{5}-[0-9]{4}" name="telefone" value="<?= $id ? $infos['telefone'] : "" ?>" <?= $id ? "" : "required" ?>/>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">Senha</label>
-                                                        <input type="password" class="form-control" name="senha" <?= $id ? "" : "required" ?>/>
+                                                        <input type="password" class="form-control" name="senha" placeholder="<?= $id ? "Digite a nova senha" : "" ?>" <?= $id ? "" : "required" ?>/>
                                                     </div>
                                                 </div>
                                             </div>
