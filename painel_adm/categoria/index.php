@@ -23,11 +23,12 @@ if ($_GET['msg'] == "adderro") {
     ?>
 
     <div class="main-panel">
+
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">Table List</a>
+            <a class="navbar-brand" href="javascript:;">Categorias</a>
           </div>
         </div>
       </nav>
@@ -40,8 +41,8 @@ if ($_GET['msg'] == "adderro") {
               <div class="card">
 
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Simple Table</h4>
-                  <p class="card-category"> Here is a subtitle for this table</p>
+                  <h4 class="card-title ">Categorias</h4>
+                  <p class="card-category">Crie, edite e exclua categorias!!</p>
                 </div>
 
                 <div class="card-body">
