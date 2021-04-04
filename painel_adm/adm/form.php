@@ -98,7 +98,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label class="bmd-label-floating">Senha</label>
-                                                        <input type="password" class="form-control" name="senha" placeholder="<?= $id ? "Digite a nova senha" : "" ?>" <?= $id ? "" : "required" ?>/>
+                                                        <input type="password" class="form-control" name="senha" <?= $id ? "" : "required" ?>/>
                                                     </div>
                                                 </div>
                                             </div>
