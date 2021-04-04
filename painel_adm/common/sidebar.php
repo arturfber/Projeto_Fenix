@@ -18,7 +18,7 @@
       <li class="nav-item ">
         <a class="nav-link" href="<?= PATH_ROOT ?>/tables.php">
           <i class="material-icons">content_paste</i>
-          <p>Table List</p>
+          <p>Tabelas de Notícias</p>
         </a>
       </li>
       <li class="nav-item ">
