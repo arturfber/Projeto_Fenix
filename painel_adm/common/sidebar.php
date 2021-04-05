@@ -23,21 +23,16 @@
       </li>
       <li class="nav-item ">
         <a class="nav-link" href="<?= PATH_ROOT ?>/adm/adm.php">
-          <i class="material-icons">content_paste</i>
+          <i class="material-icons">person</i>
           <p>Lista Administrador</p>
         </a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="<?= PATH_ROOT ?>/typography.php">
-          <i class="material-icons">library_books</i>
-          <p>Typography</p>
+        <a class="nav-link" href="<?= PATH_ROOT ?>/categoria/index.php">
+          <i class="material-icons">category</i>
+          <p>Categorias</p>
         </a>
       </li>
-      <li class="nav-item ">
-        <a class="nav-link" href="<?= PATH_ROOT ?>/icons.php">
-          <i class="material-icons">bubble_chart</i>
-          <p>Icons</p>
-        </a>
       </li>
     </ul>
   </div>
