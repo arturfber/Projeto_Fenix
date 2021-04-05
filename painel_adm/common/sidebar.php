@@ -10,12 +10,6 @@
   <div class="sidebar-wrapper">
     <ul class="nav">
       <li class="nav-item ">
-        <a class="nav-link" href="<?= PATH_ROOT ?>/user.php">
-          <i class="material-icons">person</i>
-          <p>User Profile</p>
-        </a>
-      </li>
-      <li class="nav-item ">
         <a class="nav-link" href="<?= PATH_ROOT ?>/noticia/index.php">
           <i class="material-icons">content_paste</i>
           <p>Tabelas de Notícias</p>
