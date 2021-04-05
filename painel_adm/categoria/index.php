@@ -11,6 +11,7 @@ if ($_GET['msg'] == "adderro") {
 
 <head>
   <?php
+    include_once "../config.php";
     include_once "../common/head.php";
   ?>
 </head>
