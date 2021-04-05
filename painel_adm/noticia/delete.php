@@ -6,7 +6,7 @@ if (isset($_GET['id'])) {
   $id = $_GET['id'];
   try {
     $connect->exec("DELETE FROM noticias WHERE id = '$id'");
-    header("location: index.php");
+    header("location: index.php?msg=deletesucess");
   } catch (PDOException $e) {
     // echo $e->getMessage();
     header("location: index.php?msg=deleteerro");

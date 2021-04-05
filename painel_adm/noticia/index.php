@@ -119,6 +119,18 @@
 
   <?php
     include_once "../common/scripts.php";
+
+    if ($_GET['msg'] == 'deleteerro') {
+      echo '
+        <script>
+          alert("Não foi possível excluir essa noticia")
+        </script> ';
+    } elseif ($_GET['msg'] == 'deletesucess') {
+      echo '
+        <script>
+          alert("Notícia excluída com sucesso")
+        </script> ';
+    }
   ?>
 
 </body>
