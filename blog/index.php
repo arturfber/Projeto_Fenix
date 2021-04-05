@@ -52,6 +52,7 @@
                 <div class="info-seguir" id="info-seguir">
                     <h2>SIGA O NOME DO BLOG</h2>
                     <p>Veja as últimas notícias no mundo dos games, aqui você ficará sabendo tudo o que acontece em tempo real, todas as informações, dicas e preços!</p>
+                    teste
                     <form action="modules/cadastro_usuario.php" method="POST">
                         <input type="text" name="nome" placeholder="NOME">
                         <input type="email" name="email" placeholder="E-MAIL">
