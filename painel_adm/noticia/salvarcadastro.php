@@ -1,6 +1,6 @@
 <?php
 
-    include_once "../blog/conexao.php";
+    include_once "../conexao.php";
 
     $titulo = $_POST['titulo'];
     $subtitulo = $_POST['subtitulo'];
@@ -13,4 +13,4 @@
 
     $connect->exec($sql);
 
-    header('location: tables.php');
+    header('location: index.php');

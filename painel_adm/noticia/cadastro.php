@@ -1,5 +1,6 @@
 <?php
     include_once "../conexao.php";
+    include_once "../categoria/get_categorias.php";
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +48,7 @@
                 </div>
                 <div class="card-body">
                 <form action="salvarcadastro.php" method="post">
+
                   <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
@@ -57,6 +59,7 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
@@ -67,6 +70,7 @@
                         </div>
                       </div>
                     </div>
+
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
@@ -86,21 +90,30 @@
                           <input type="text" name="data_noticia" class="form-control">
                         </div>
                       </div>
+
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Autor</label>
                           <input type="text" name="autor" class="form-control">
                         </div>
                       </div>
+
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Categoria</label>
-                          <input type="text" name="categoria" class="form-control">
+
+                          <select name="categoria" class="form-select">
+                            <?php foreach ($categorias as $categoria): ?>
+                              <option value="<?= $categoria['id']?>"><?= $categoria['nome']?> </option>
+                            <?php endforeach ?>
+                          </select>
+
                         </div>
                       </div>
                       
                     </div>
                     <button type="submit" class="btn btn-primary pull-right">Cadastrar</button>
+                    <a href="adm.php"><button type="button" class="btn btn-primary pull-right">Voltar</button></a>
                     <div class="clearfix"></div>
                 </form>
                 </div>
