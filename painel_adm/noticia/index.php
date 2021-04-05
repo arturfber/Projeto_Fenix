@@ -73,10 +73,14 @@
                               <?=$noticia['titulo']?>
                             </td>
                             <td class="text-primary">
-                              <a href="">0</a>
+                              <a href="">
+                                <i class="material-icons">edit</i>
+                              </a>
                             </td>
                             <td class="text-primary">
-                              <a href="">X</a>
+                              <a href="delete.php?id=<?= $noticia['id']?>">
+                                <i class="material-icons">delete</i>
+                              </a>
                             </td>
                           </tr>
 
