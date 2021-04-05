@@ -1,5 +1,5 @@
 <?php
-    include_once "../blog/conexao.php";
+    include_once "../conexao.php";
 ?>
 
 <!DOCTYPE html>
@@ -7,7 +7,8 @@
 
 <head>
   <?php
-    include_once "common/head.php";
+    include_once "../config.php";
+    include_once "../common/head.php";
   ?>
 </head>
 
@@ -15,7 +16,7 @@
   <div class="wrapper ">
 
     <?php
-      include_once "common/sidebar.php";
+      include_once "../common/sidebar.php";
     ?>
 
     <div class="main-panel">
@@ -110,14 +111,14 @@
       </div>
 
       <?php
-        include_once "common/footer.php";
+        include_once "../common/footer.php";
       ?>
 
     </div>
   </div>
 
   <?php
-    include_once "common/scripts.php";
+    include_once "../common/scripts.php";
   ?>
 </body>
 
