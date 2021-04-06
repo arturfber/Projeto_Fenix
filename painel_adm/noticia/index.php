@@ -73,7 +73,7 @@
                               <?=$noticia['titulo']?>
                             </td>
                             <td class="text-primary">
-                              <a href="">
+                            <a href="cadastro.php?id=<?= $noticia['id']?>">
                                 <i class="material-icons">edit</i>
                               </a>
                             </td>

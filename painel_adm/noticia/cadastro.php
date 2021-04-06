@@ -1,6 +1,20 @@
 <?php
     include_once "../conexao.php";
     include_once "../categoria/get_categorias.php";
+
+    if (isset($_GET['id'])){
+        $id = $_GET['id'];
+
+        $sql = 'select n.*, i.imagem from noticias n inner join imagem i on i.fk_noticias_id where n.id = ' .$id;
+        $dados = $connect->query($sql);
+
+        foreach ($dados as $dado){
+            $infos = $dado;
+        }
+    }else{
+        $id = 0;
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -49,12 +63,14 @@
                 <div class="card-body">
                 <form action="salvarcadastro.php" method="post">
 
+                <input type="hidden" name="id" value="<?= $id ?>">
+
                   <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
                           <label>TÍTULO</label>
                           <div class="form-group">
-                            <textarea name="titulo" class="form-control" rows="5"></textarea>
+                            <textarea name="titulo" class="form-control" rows="2"><?= $infos['titulo']?></textarea>
                           </div>
                         </div>
                       </div>
@@ -65,7 +81,7 @@
                         <div class="form-group">
                           <label>SUBTÍTULO</label>
                           <div class="form-group">
-                            <textarea name="subtitulo" class="form-control" rows="5"></textarea>
+                            <textarea name="subtitulo" class="form-control" rows="3"><?= $infos['subtitulo']?></textarea>
                           </div>
                         </div>
                       </div>
@@ -76,7 +92,7 @@
                         <div class="form-group">
                           <label>TEXTO</label>
                           <div class="form-group">
-                            <textarea name="texto" class="form-control" rows="5"></textarea>
+                            <textarea name="texto" class="form-control" rows="7"><?= $infos['texto']?></textarea>
                           </div>
                         </div>
                       </div>
@@ -87,14 +103,14 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Data yyyy-mm-dd</label>
-                          <input type="text" name="data_noticia" class="form-control">
+                          <input type="text" name="data_noticia" class="form-control" value="<?= $infos['data_noticia']?>">
                         </div>
                       </div>
 
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Autor</label>
-                          <input type="text" name="autor" class="form-control">
+                          <input type="text" name="autor" class="form-control" value="<?= $infos['autor']?>">
                         </div>
                       </div>
 
@@ -104,7 +120,9 @@
 
                           <select name="categoria" class="form-select">
                             <?php foreach ($categorias as $categoria): ?>
-                              <option value="<?= $categoria['id']?>"><?= $categoria['nome']?> </option>
+                              <option value="<?= $categoria['id']?>" <?= $categoria['id'] == $infos['fk_categoria_id'] ? "selected" : "" ?>>
+                                <?= $categoria['nome']?> 
+                              </option>
                             <?php endforeach ?>
                           </select>
 
@@ -113,7 +131,7 @@
                       
                     </div>
                     <button type="submit" class="btn btn-primary pull-right">Cadastrar</button>
-                    <a href="adm.php"><button type="button" class="btn btn-primary pull-right">Voltar</button></a>
+                    <a href="index.php"><button type="button" class="btn btn-primary pull-right">Voltar</button></a>
                     <div class="clearfix"></div>
                 </form>
                 </div>
@@ -132,6 +150,13 @@
 
   <?php
     include_once "../common/scripts.php";
+
+    if ($_GET['msg'] == "createerro") {
+      echo '
+        <script>
+          alert("Não foi possível cadastrar a noticia");
+        </script> ';
+    }
   ?>
 </body>
 
