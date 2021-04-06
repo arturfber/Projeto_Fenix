@@ -70,7 +70,7 @@
                         <div class="form-group">
                           <label>TÍTULO</label>
                           <div class="form-group">
-                            <textarea name="titulo" class="form-control" rows="2"><?= $infos['titulo']?></textarea>
+                            <textarea name="titulo" class="form-control" rows="2"><?= $id ? $infos['titulo'] : ""?></textarea>
                           </div>
                         </div>
                       </div>
@@ -81,7 +81,7 @@
                         <div class="form-group">
                           <label>SUBTÍTULO</label>
                           <div class="form-group">
-                            <textarea name="subtitulo" class="form-control" rows="3"><?= $infos['subtitulo']?></textarea>
+                            <textarea name="subtitulo" class="form-control" rows="3"><?= $id ? $infos['subtitulo'] : ""?></textarea>
                           </div>
                         </div>
                       </div>
@@ -92,7 +92,7 @@
                         <div class="form-group">
                           <label>TEXTO</label>
                           <div class="form-group">
-                            <textarea name="texto" class="form-control" rows="7"><?= $infos['texto']?></textarea>
+                            <textarea name="texto" class="form-control" rows="7"><?= $id ? $infos['texto'] : ""?></textarea>
                           </div>
                         </div>
                       </div>
@@ -103,14 +103,14 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Data yyyy-mm-dd</label>
-                          <input type="text" name="data_noticia" class="form-control" value="<?= $infos['data_noticia']?>">
+                          <input type="text" name="data_noticia" class="form-control" value="<?= $id ? $infos['data_noticia'] : ""?>">
                         </div>
                       </div>
 
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Autor</label>
-                          <input type="text" name="autor" class="form-control" value="<?= $infos['autor']?>">
+                          <input type="text" name="autor" class="form-control" value="<?= $id ? $infos['autor'] : ""?>">
                         </div>
                       </div>
 
@@ -120,7 +120,14 @@
 
                           <select name="categoria" class="form-select">
                             <?php foreach ($categorias as $categoria): ?>
-                              <option value="<?= $categoria['id']?>" <?= $categoria['id'] == $infos['fk_categoria_id'] ? "selected" : "" ?>>
+                              <option value="<?= $categoria['id']?>" 
+                              <?php if($id){ 
+                                if($categoria['id'] == $infos['fk_categoria_id']){
+                                  echo "selected";
+                                }else{
+                                  echo "" ;
+                                }
+                                }?>>
                                 <?= $categoria['nome']?> 
                               </option>
                             <?php endforeach ?>
