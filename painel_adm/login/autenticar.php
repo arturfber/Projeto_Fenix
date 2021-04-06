@@ -5,8 +5,7 @@ include_once "../conexao.php";
 // $redireciona = $_GET['redirect'];
 
 $username = $_POST['username'];
-$senha =  $_POST['passwd'];
-
+$senha = hash('sha256',  $_POST['passwd']);
 $sql = "select * from administrador where email = '$username' and senha = '$senha'";
 
 $resultado = $connect->query($sql);

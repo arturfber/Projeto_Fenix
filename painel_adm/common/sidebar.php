@@ -15,10 +15,6 @@
           <p>User Profile</p>
         </a>
       </li>
-      <li class="nav-item">
-      <a href="login/logout.php">Logout</a>
-
-      </li>
       <li class="nav-item ">
         <a class="nav-link" href="<?= PATH_ROOT ?>/tables.php">
           <i class="material-icons">content_paste</i>
@@ -37,6 +33,12 @@
           <p>Categorias</p>
         </a>
       </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="login/logout.php">
+          <i class="material-icons">logout</i>
+          <p>Logout</p>
+        </a>
       </li>
     </ul>
   </div>

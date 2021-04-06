@@ -20,8 +20,10 @@
 
     include_once "conexao.php";
 
-    // $sql = 'select * from tb_sites';
-    // $useful_links = $connect->query($sql);
+    // Pegando nome da conta do administrador
+    $sql = 'SELECT * FROM administrador';
+    $dados_adm = $connect->query($sql);
+    foreach($dados_adm as $nome_adm);
 
 
   ?>
@@ -39,7 +41,7 @@
       <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
         <div class="container-fluid">
           <div class="navbar-wrapper">
-            <a class="navbar-brand" href="javascript:;">User Profile</a>
+            <a class="navbar-brand" href="javascript:;"><?=$nome_adm['nome_completo']?></a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="sr-only">Toggle navigation</span>
