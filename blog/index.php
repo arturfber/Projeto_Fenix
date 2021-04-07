@@ -74,7 +74,7 @@
             <a href="post.php?id=<?=$noticias['id']?>">
                 <h2><?=$noticias['titulo']?></h2>
                 <p><?= date("d/m/Y", strtotime($noticias['data_noticia']))?></p>
-                <img src="<?=$noticias['imagem']?>" alt="">
+                <img src="image/<?=$noticias['imagem']?>" alt="">
                 <p class="info-p"><?=$noticias['subtitulo']?></p>
             </a>
         </div><!--info-post-->

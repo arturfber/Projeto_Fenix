@@ -65,12 +65,12 @@
                                                         <td><?=$adm['telefone']?></td>
                                                         <td>
                                                             <a href="form.php?id=<?=$adm['id']?>">
-                                                                <img src="img/edit.png" alt="editar" />
+                                                                <i class="material-icons">edit</i>
                                                             </a>
                                                         </td>
                                                         <td>
                                                             <a href="excluir.php?id=<?=$adm['id']?>">
-                                                                <img src="img/lixeira.png" alt="lixeira" />
+                                                            <i class="material-icons">delete</i>
                                                             </a>
                                                         </td>
                                                     </tr>

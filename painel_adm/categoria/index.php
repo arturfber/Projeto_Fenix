@@ -1,8 +1,14 @@
 <?php
 include_once "get_categorias.php";
 
-if ($_GET['msg'] == "adderro") {
-  $msgadd = "Ocorreu um erro ao criar a categoria!!!";
+if(isset($_GET['msg'])){
+  if ($_GET['msg'] == "adderro") {
+    $msgadd = "Ocorreu um erro ao criar a categoria!!!";
+  }else{
+    $msgadd = "";
+  }
+}else{
+  $msgadd = "";
 }
 ?>
 
