@@ -1,3 +1,3 @@
 <?php
 
-define("PATH_IMAGE", "http://localhost/Projeto_Fenix/blog/image/");
+define("PATH_IMAGE", $_SERVER['DOCUMENT_ROOT']."/Projeto_Fenix/blog/image/");
