@@ -29,7 +29,7 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="login/logout.php">
+        <a class="nav-link" href="<?= PATH_ROOT ?>/login/logout.php">
           <i class="material-icons">logout</i>
           <p>Logout</p>
         </a>

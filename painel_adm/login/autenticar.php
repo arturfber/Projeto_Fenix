@@ -14,7 +14,7 @@ $resultado = $connect->query($sql);
 if ($resultado->rowCount()){
     //credenciais válidas
     $_SESSION['login_ativo'] = true;
-    Header('Location: ' . '../index.php');
+    Header('Location: ' . '../noticia/index.php');
 }else{
     //credenciais inválidas
     $_SESSION['login_ativo'] = false;
