@@ -1,4 +1,7 @@
 <?php
+    include_once "../config.php";
+    include_once "../login/check_login.php";
+    
     include_once "../conexao.php";
     include_once "../categoria/get_categorias.php";
 
@@ -22,7 +25,6 @@
 
 <head>
   <?php
-    include_once "../config.php";
     include_once "../common/head.php";
   ?>
 </head>

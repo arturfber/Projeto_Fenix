@@ -1,4 +1,7 @@
 <?php
+include_once "../config.php";
+include_once "../login/check_login.php";
+
 include_once "get_categorias.php";
 
 if(isset($_GET['msg'])){
@@ -17,7 +20,6 @@ if(isset($_GET['msg'])){
 
 <head>
   <?php
-    include_once "../config.php";
     include_once "../common/head.php";
   ?>
 </head>

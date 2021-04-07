@@ -1,4 +1,7 @@
 <?php    
+    include_once "../config.php";
+    include_once "../login/check_login.php";
+
     include_once "../conexao.php";
 
     if (isset($_GET['id'])){
@@ -21,7 +24,6 @@
 
     <head>
         <?php
-            include_once "../config.php";
             include_once "../common/head.php";
         ?>
     </head>
