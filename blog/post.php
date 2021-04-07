@@ -2,8 +2,7 @@
     include_once "conexao.php";
     $id = $_GET['id'];
     
-    $post = $connect->query('select * from noticias inner join imagem
-    ON fk_noticias_id = noticias.id where noticias.id = ' . $id );
+    $post = $connect->query('SELECT * FROM noticias WHERE id = ' . $id );
 
 
     foreach($post as $i){
@@ -41,7 +40,7 @@
             <small><?= date("d/m/Y", strtotime($dados['data_noticia']))?></small>
 
             <div>
-                <img src="<?=$dados['imagem']?>" width="900" alt="">
+                <img src="image/<?=$dados['imagem']?>" width="900" alt="">
             </div>
             <small>Título do vídeo</small>
         </div>

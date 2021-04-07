@@ -35,7 +35,7 @@
             
             <div class="post-box">
                 <a href="post.php?id=<?=$noticia['id']?>">
-                    <img src="<?=$noticia['imagem']?>" alt="">
+                    <img src="image/<?=$noticia['imagem']?>" alt="">
                     <h2><?=$noticia['titulo'] ?></h2>
                     <p><?= date("d/m/Y", strtotime($noticia['data_noticia']))?></p>
                     <p><?=$noticia['subtitulo']?></p>
